@@ -10,6 +10,5 @@ RUN npm install @types/node --save
 RUN typings install dt~node --save --global
 RUN npm install
 RUN tsc
-RUN npm start
 EXPOSE $PORT_NO
 CMD export PORT=$PORT_NO && npm start
