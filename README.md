@@ -55,6 +55,7 @@ rejectUnauthorized=false
 12. execute the below commands 
 
 typings install dt~node --save --global
+
 typings search node
 
 13. stop and start compiler in visual stuio code
