@@ -1,6 +1,5 @@
 FROM node:latest
 MAINTAINER Rupesh Papneja<rupesh.papneja@gmail.com>
-ARG PORT_NO=8000
 RUN mkdir -p /latitude/apps
 WORKDIR /latitude/apps/
 RUN git clone https://github.com/rupesh-papneja/node-typescript-server.git
@@ -10,5 +9,5 @@ RUN npm install @types/node --save
 RUN typings install dt~node --save --global
 RUN npm install
 RUN tsc
-EXPOSE $PORT_NO
-CMD export PORT=$PORT_NO && npm start
+EXPOSE 8000
+CMD export PORT=8000 && npm start
